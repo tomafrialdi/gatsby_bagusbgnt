@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import '../styles/index.css';
 
+<script src="https://js.pusher.com/beams/1.0/push-notifications-cdn.js"></script>
+
 function Index() {
   const [date, setDate] = useState(null);
   useEffect(() => {
