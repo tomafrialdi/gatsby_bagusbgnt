@@ -4,6 +4,17 @@ import '../styles/index.css';
 
 <script src="https://js.pusher.com/beams/1.0/push-notifications-cdn.js"></script>
 
+<script>
+  const beamsClient = new PusherPushNotifications.Client({
+    instanceId: '54ea3d7e-839e-4f7c-aed8-53b3f554573c',
+  });
+
+  beamsClient.start()
+    .then(() => beamsClient.addDeviceInterest('hello'))
+    .then(() => console.log('Successfully registered and subscribed!'))
+    .catch(console.error);
+</script>
+
 function Index() {
   const [date, setDate] = useState(null);
   useEffect(() => {
